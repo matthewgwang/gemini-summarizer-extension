@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "AI Page Summarizer (Gemini)",
+    "version": "2.0",
+    "description": "Uses Google Gemini to summarize articles and answer questions.",
+    "permissions": [
+      "sidePanel",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "http://*/*",
+      "https://*/*",
+      "https://generativelanguage.googleapis.com/"
+    ],
+    "options_page": "options.html",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "side_panel": {
+      "default_path": "sidebar.html"
+    },
+    "action": {
+      "default_title": "Open AI Summarizer"
+    },
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }

@@ -1,0 +1,89 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 15px;
+    width: 300px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    color: #111;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#summary-text {
+    white-space: pre-wrap; /* Preserves formatting and line breaks in the summary */
+    line-height: 1.6;
+}
+
+/* --- New styles for the chat interface --- */
+
+#chat-history {
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto; /* Makes the chat scrollable */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chat-form {
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+#question-input {
+    flex-grow: 1; /* Makes the input field take up available space */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#send-button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for individual chat messages */
+.chat-message {
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 85%;
+    white-space: pre-wrap; /* Preserves line breaks in the AI's response */
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end; /* Aligns user messages to the right */
+    border-bottom-right-radius: 2px;
+}
+
+.ai-message {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start; /* Aligns AI messages to the left */
+    border-bottom-left-radius: 2px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Assistant</h1>
+        <!-- SUMMARY SECTION (Unchanged) -->
+        <div class="section">
+            <h2>Summary</h2>
+            <div id="summary-container" class="content-box">
+                <p id="summary-text">Waiting for article content...</p>
+            </div>
+        </div>
+
+        <!-- CHAT SECTION (New) -->
+        <div class="section">
+            <h2>Chat with the AI</h2>
+            <!-- This div will hold the chat messages -->
+            <div id="chat-history" class="content-box"></div>
+            <!-- This form is for user input -->
+            <form id="chat-form">
+                <input type="text" id="question-input" placeholder="Ask a question about the article..." autocomplete="off">
+                <button type="submit" id="send-button">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+</body>
+</html>

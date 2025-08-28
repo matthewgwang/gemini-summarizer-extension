@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Summarizer Settings</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; padding: 20px; width: 450px; background-color: #f9f9f9;}
+        h1 { color: #111; }
+        .container { background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        label { font-weight: bold; display: block; margin-bottom: 10px; color: #333; }
+        input { box-sizing: border-box; width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        button { width: 100%; padding: 12px 15px; border: none; background-color: #007bff; color: white; cursor: pointer; border-radius: 4px; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        #status { margin-top: 15px; color: green; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        <label for="apiKey">Google AI API Key:</label>
+        <input type="password" id="apiKey" placeholder="Paste your Gemini API key here">
+        <button id="saveButton">Save API Key</button>
+        <div id="status"></div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
