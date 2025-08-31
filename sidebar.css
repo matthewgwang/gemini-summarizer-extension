@@ -26,16 +26,14 @@ h1, h2 {
 }
 
 #summary-text {
-    white-space: pre-wrap; /* Preserves formatting and line breaks in the summary */
+    white-space: pre-wrap; 
     line-height: 1.6;
 }
-
-/* --- New styles for the chat interface --- */
 
 #chat-history {
     min-height: 150px;
     max-height: 300px;
-    overflow-y: auto; /* Makes the chat scrollable */
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -48,7 +46,7 @@ h1, h2 {
 }
 
 #question-input {
-    flex-grow: 1; /* Makes the input field take up available space */
+    flex-grow: 1; 
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 8px;
@@ -66,24 +64,24 @@ h1, h2 {
     background-color: #0056b3;
 }
 
-/* Styling for individual chat messages */
+
 .chat-message {
     padding: 8px 12px;
     border-radius: 10px;
     max-width: 85%;
-    white-space: pre-wrap; /* Preserves line breaks in the AI's response */
-}
+    white-space: pre-wrap; 
 
 .user-message {
     background-color: #007bff;
     color: white;
-    align-self: flex-end; /* Aligns user messages to the right */
+    align-self: flex-end; 
     border-bottom-right-radius: 2px;
 }
 
 .ai-message {
     background-color: #e9ecef;
     color: #333;
-    align-self: flex-start; /* Aligns AI messages to the left */
+    align-self: flex-start; 
     border-bottom-left-radius: 2px;
+
 }
