@@ -1,12 +1,10 @@
-// This listener runs once to set up the side panel.
+
 chrome.runtime.onInstalled.addListener(() => {
   chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })
     .catch((error) => console.error('Failed to set side panel behavior:', error));
 });
 
-// --- THIS IS THE "MEMORY" OF THE EXTENSION ---
 let currentArticleContent = '';
-// --- NEW: A memory for the chat conversation history ---
 let chatHistory = [];
 
 
@@ -21,7 +19,6 @@ async function fetchSummary(content) {
   if (!apiKey) return "Google AI API Key not found...";
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${apiKey}`;
 
-  // ... (The rest of the fetchSummary function is the same)
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
@@ -45,7 +42,6 @@ async function fetchAnswer(question) {
   if (!apiKey) return "Google AI API Key not found...";
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${apiKey}`;
 
-  // *** THE IMPORTANT PART: We build a prompt with the chat history ***
   const prompt = `You are a helpful AI assistant. A user has provided you with an article and is asking questions about it. 
   Your memory of the conversation is provided below.
   Based ONLY on the article context and the conversation history, answer the user's NEW question.
@@ -97,3 +93,4 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   })();
   return true;
 });
+
